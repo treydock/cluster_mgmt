@@ -1,0 +1,21 @@
+<%= semantic_form_for @request do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :request_status_id, :as => :select, :collection => RequestStatus.all %>
+    <%#= f.input :expires %>
+    <%= f.input :firstname %>
+    <%= f.input :lastname %>
+    <%= f.input :email %>
+    <%= f.input :phone %>
+    <%= f.input :department_id %>
+    <%= f.input :class_id %>
+    <%= f.input :affiliation_id %>
+    <%= f.input :uid %>
+    <%= f.input :gid %>
+    <%= f.input :node_hours %>
+    <%= f.input :description %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>

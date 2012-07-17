@@ -1,0 +1,45 @@
+<%- model_class = @request.class -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:request_status_id) %>:</strong></dt>
+  <dd><%= @request.request_status_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:expires) %>:</strong></dt>
+  <dd><%= @request.expires %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:firstname) %>:</strong></dt>
+  <dd><%= @request.firstname %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:lastname) %>:</strong></dt>
+  <dd><%= @request.lastname %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
+  <dd><%= @request.email %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:phone) %>:</strong></dt>
+  <dd><%= @request.phone %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:department_id) %>:</strong></dt>
+  <dd><%= @request.department_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:class_id) %>:</strong></dt>
+  <dd><%= @request.class_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:affiliation_id) %>:</strong></dt>
+  <dd><%= @request.affiliation_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:uid) %>:</strong></dt>
+  <dd><%= @request.uid %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:gid) %>:</strong></dt>
+  <dd><%= @request.gid %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:node_hours) %>:</strong></dt>
+  <dd><%= @request.node_hours %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
+  <dd><%= @request.description %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              requests_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_request_path(@request), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              request_path(@request),
+              :method => 'delete',
+              :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+              :class => 'btn btn-danger' %>
+</div>

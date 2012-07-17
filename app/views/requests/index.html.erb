@@ -1,0 +1,60 @@
+<%- model_class = Request.new.class -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:request_status_id) %></th>
+      <th><%= model_class.human_attribute_name(:expires) %></th>
+      <th><%= model_class.human_attribute_name(:firstname) %></th>
+      <th><%= model_class.human_attribute_name(:lastname) %></th>
+      <th><%= model_class.human_attribute_name(:email) %></th>
+      <th><%= model_class.human_attribute_name(:phone) %></th>
+      <th><%= model_class.human_attribute_name(:department_id) %></th>
+      <th><%= model_class.human_attribute_name(:class_id) %></th>
+      <th><%= model_class.human_attribute_name(:affiliation_id) %></th>
+      <th><%= model_class.human_attribute_name(:uid) %></th>
+      <th><%= model_class.human_attribute_name(:gid) %></th>
+      <th><%= model_class.human_attribute_name(:node_hours) %></th>
+      <th><%= model_class.human_attribute_name(:description) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @requests.each do |request| %>
+      <tr>
+        <td><%= link_to request.id, request_path(request) %></td>
+        <td><%= request.request_status_id %></td>
+        <td><%= request.expires %></td>
+        <td><%= request.firstname %></td>
+        <td><%= request.lastname %></td>
+        <td><%= request.email %></td>
+        <td><%= request.phone %></td>
+        <td><%= request.department_id %></td>
+        <td><%= request.class_id %></td>
+        <td><%= request.affiliation_id %></td>
+        <td><%= request.uid %></td>
+        <td><%= request.gid %></td>
+        <td><%= request.node_hours %></td>
+        <td><%= request.description %></td>
+        <td><%=l request.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_request_path(request), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      request_path(request),
+                      :method => :delete,
+                      :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_request_path,
+            :class => 'btn btn-primary' %>

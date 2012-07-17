@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  request_status_id: 1
+  expires: 2012-07-17 13:06:50
+  firstname: MyString
+  lastname: MyString
+  email: MyString
+  phone: MyString
+  department_id: 1
+  class_id: 1
+  affiliation_id: 1
+  uid: 1
+  gid: 1
+  node_hours: 1
+  description: MyText
+
+two:
+  request_status_id: 1
+  expires: 2012-07-17 13:06:50
+  firstname: MyString
+  lastname: MyString
+  email: MyString
+  phone: MyString
+  department_id: 1
+  class_id: 1
+  affiliation_id: 1
+  uid: 1
+  gid: 1
+  node_hours: 1
+  description: MyText
