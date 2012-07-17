@@ -6,8 +6,25 @@ gem 'rails', '3.2.6'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
+#gem 'therubyracer'
+#gem 'execjs'
 
-gem 'json'
+
+# Frontend enhancements
+gem 'formtastic', '~> 2.2.0'
+gem 'formtastic-bootstrap', '~> 2.0.0',
+  :git => 'git://github.com/niedfelj/formtastic-bootstrap.git',
+  :branch => 'bootstrap2-rails3-2-formtastic-2-2'
+
+
+# Functionality
+gem 'rails3-jquery-autocomplete'
+
+# Authentication & Authorization
+gem 'devise'
+gem 'omniauth-cas'
+gem 'cancan'
+gem 'rolify'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -19,6 +36,8 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+
+  gem 'twitter-bootstrap-rails'
 end
 
 gem 'jquery-rails'
@@ -36,4 +55,4 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'ruby-debug'
+# gem 'debugger'
