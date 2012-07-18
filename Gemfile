@@ -19,6 +19,7 @@ gem 'formtastic-bootstrap', '~> 2.0.0',
 
 # Functionality
 gem 'rails3-jquery-autocomplete'
+gem 'client_side_validations'
 
 # Authentication & Authorization
 gem 'devise'
