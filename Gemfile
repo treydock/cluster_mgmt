@@ -9,6 +9,10 @@ gem 'mysql2'
 #gem 'therubyracer'
 #gem 'execjs'
 
+# Administration
+gem 'rails_admin'
+gem 'paper_trail', '~> 2'
+
 
 # Frontend enhancements
 gem 'formtastic', '~> 2.2.0'
@@ -20,6 +24,7 @@ gem 'formtastic-bootstrap', '~> 2.0.0',
 # Functionality
 gem 'rails3-jquery-autocomplete'
 gem 'client_side_validations'
+gem 'fastercsv' # required for rails_admin
 
 # Authentication & Authorization
 gem 'devise'

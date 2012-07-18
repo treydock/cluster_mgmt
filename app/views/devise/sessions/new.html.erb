@@ -1,8 +1,8 @@
 <h2>Sign in</h2>
 
-<%= semantic_form_for(resource, :as => resource_name, :url => session_path(resource_name)), :validate => true do |f| %>
+<%= semantic_form_for(resource, :as => resource_name, :url => session_path(resource_name), :validate => true) do |f| %>
   <%= f.inputs do %>
-    <%= f.input :email, :as => :email %>
+    <%= f.input :username %>
     <%= f.input :password, :as => :password %>
     <% if devise_mapping.rememberable? -%>
       <%= f.input :remember_me, :as => :boolean %>
@@ -10,7 +10,7 @@
   <% end -%>
 
   <%= f.actions do %>
-    <%= f.action :submit, :as => :input %>
+    <%= f.action :submit, :as => :input, :label => 'Sign In' %>
   <% end %>
 <% end %>
 
