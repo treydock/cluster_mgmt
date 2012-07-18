@@ -12,6 +12,9 @@
 # Ignore paperclip uploads
 /public/system/*
 
+# Ignore environment specific configurations
+/config/database.yml
+
 # Auto generated ignore from Github
 *.rbc
 *.sassc
