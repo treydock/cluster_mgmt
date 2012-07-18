@@ -1,5 +1,6 @@
 # Ignore bundler config
 /.bundle
+/vendor/bundle
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
@@ -8,14 +9,15 @@
 /log/*
 /tmp/*
 
+# Ignore paperclip uploads
+/public/system/*
+
 # Auto generated ignore from Github
 *.rbc
 *.sassc
 .sass-cache
 capybara-*.html
 .rspec
-/vendor/bundle
-/public/system/*
 /coverage/
 /spec/tmp/*
 **.orig
