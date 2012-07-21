@@ -5,13 +5,15 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :omniauthable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :authentication_keys => [:login]
+         :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :password, :password_confirmation, :remember_me, :login
   attr_accessible :email, :firstname, :lastname, :username
 
   attr_accessor :login
+
+  protected
 
   def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup

@@ -5,7 +5,7 @@ namespace :cluster_mgmt do
 
       unless @user
         @user = User.create do |u|
-          u.username = 'Admin'
+          u.username = 'admin'
           u.email = 'admin@example.com'
           u.password = 'Password1'
           u.password_confirmation = 'Password1'
