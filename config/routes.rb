@@ -14,6 +14,8 @@ ClusterMgmt::Application.routes.draw do
 
   resources :requests
 
+  resources :node_incidents
+
   get "home/index"
 
   # The priority is based upon order of creation:
